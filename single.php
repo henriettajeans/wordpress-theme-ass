@@ -3,32 +3,39 @@
 get_header();
 the_post();
 
+
 ?>
-<section>
-    <h2>
-        <?php
-        the_title(); ?>
-    </h2>
+<section class="post-wrapper">
 
-    <article>
-        <?php
-        the_content();
+    <section class="post-container">
+        <div class="post-container__img">
+            <?php the_post_thumbnail() ?>
+        </div>
+        <article class="post-container__meta">
+            <p>
+                <?php the_date(); ?>
+            </p>
+            <p>
+                <?php the_author_posts_link(); ?>
+            </p>
+            <p>
+                <?php the_category(); ?>
+            </p>
+        </article>
+        <h2 class="post-container__title">
+            <?php
+            the_title(); ?>
+        </h2>
 
-
-        ?>
-        <img id="img-container_item" src=" <?php the_post_thumbnail() ?> ">
+        <article class="post-container__content">
+            <?php
+            the_content();
+            ?>
+        </article>
+    </section>
+    <article class="sidebar">
+        <!-- <?php dynamic_sidebar('left-sidebar'); ?> -->
     </article>
-    <p> <?php the_author_posts_link() ?>
-    </p>
-    <p> Såhär många inlägg har <?php
-                                the_author(); ?> gjort: <?php
-                                                        echo get_the_author_posts();
-                                                        ?>
-    </p>
-    <p>
-        <?php the_category(); ?>
-    </p>
-
 </section>
 <?php
 get_footer();

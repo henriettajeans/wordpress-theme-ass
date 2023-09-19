@@ -1,5 +1,52 @@
 @import "header.scss";
+@import "post.scss";
 
 body{
-    background-color: beige;
+    background-color: rgb(245, 239, 236);
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 3%;
+    }
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+    }
+   
+}
+.container{
+    max-width: 80%;
+    height: 100%;
+    // display: flex;
+    margin-top: 2em;
+    &__content{
+        justify-content: center;
+        &__label{
+            
+            text-align: center;
+        }
+    }
+}
+input, textarea{
+    border: solid $dustypink;
+    border-radius: 10px;
+    background-color: $lightpink;
+}
+li {
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: none;
+}
+a{
+    text-decoration: none;
+    text-transform: none;
+    color: pink;
+    text-shadow: 1px 1px 4px rgb(244, 238, 244);
+      
 }

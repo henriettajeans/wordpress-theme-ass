@@ -6,7 +6,7 @@ get_header();
 
 ?>
 
-<div>
+<div class="main-wrapper">
     <!-- kan också vara get_field -->
     <!-- Ska stylas i css/sass så att texten ligger ovanpå bilden -->
     <img src="<?php the_field('home_img') ?>">

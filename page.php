@@ -5,17 +5,16 @@ get_header();
 
 ?>
 
-<section>
+<section class="container">
     <h1><?php the_title(); ?></h1>
     <?php
 
     if (have_posts()) : while (have_posts()) : the_post();
 
     ?>
-            <section>
+            <section section="container__content">
                 <?php the_content(); ?>
             </section>
-            TEST
             <p><?php echo post_type_archive_title(); ?></p>
 
     <?php
@@ -26,12 +25,12 @@ get_header();
 </section>
 <article class="sidebar_container">
     <?php if (is_active_sidebar('sidebar-widget-area')) : ?>
-        <div id="sidebar">
+        <!-- <div id="sidebar">
             <?php dynamic_sidebar('sidebar-widget-area'); ?>
-        </div>
-    <?php endif; ?>
+        </div> -->
+        <!-- <?php endif; ?> -->
 
-    <!-- <?php if (is_active_sidebar('left-sidebar')) : ?>
+        <!-- <?php if (is_active_sidebar('left-sidebar')) : ?>
         <ul id="sidebar">
             <?php dynamic_sidebar('left-sidebar'); ?>
         </ul>

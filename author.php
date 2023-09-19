@@ -1,17 +1,13 @@
 <?php
 get_header();
 ?>
-<p>Inlägg av</p>
-<h1>
-    <?php the_author_posts_link(); ?>
-</h1>
+
 
 <section class="category-container">
-
-    <?php
-
-    the_author(); ?>
-
+    <p>Inlägg av</p>
+    <h1>
+        <?php the_author_posts_link(); ?>
+    </h1>
     <?php
     if (have_posts()) : while (have_posts()) : the_post();
 
